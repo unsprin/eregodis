@@ -97,54 +97,30 @@ async function createFork() {
   ).start();
 
   const data = JSON.stringify({
-    checked: false,
     allowUnlimitedContractSize: false,
-    mining: {
-      auto: true,
-      interval: 0,
-    },
+    mining: { auto: true, interval: 0 },
     accounts: {
-      // eslint-disable-next-line object-shorthand
-      mnemonic: mnemonic,
+      mnemonic: mnemonic
     },
     options: {
       hardhat: {
-        getStackTraceFailuresCount: true,
-        addCompilationResult: true,
-        impersonateAccount: true,
-        intervalMine: false,
-        getAutomine: false,
-        stopImpersonatingAccount: true,
-        reset: false,
-        setLoggingEnabled: true,
-        setMinGasPrice: false,
-        dropTransaction: false,
-        setBalance: false,
-        setCode: false,
-        setNonce: false,
-        setStorageAt: false,
-        setNextBlockBaseFeePerGas: false,
-        setCoinbase: false,
         mine: true,
+        stopImpersonatingAccount: true,
+        impersonateAccount: true
       },
       evm: {
         mine: true,
         increaseTime: true,
         setNextBlockTimestamp: true,
         revert: true,
-        snapshot: true,
-        setAutomine: false,
-        setIntervalMining: false,
-        setBlockGasLimit: true,
+        snapshot: true
       },
-      extra: {
-        overrideGas: true,
-      },
+      extra: { overrideGas: true }
     },
     forking: {
       chainId,
-      blockNumber,
-    },
+      blockNumber
+    }
   });
 
   const config = {
