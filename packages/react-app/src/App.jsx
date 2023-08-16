@@ -29,7 +29,19 @@ import externalContracts from "./contracts/external_contracts";
 // contracts
 import deployedContracts from "./contracts/hardhat_contracts.json";
 import { getRPCPollTime, Transactor, Web3ModalSetup } from "./helpers";
-import { Home, ExampleUI, SwapTokens, Hints, Subgraph, NFTMint, DEX, Lending, FlashLoan, UniSwap } from "./views";
+import {
+  Home,
+  ExampleUI,
+  SwapTokens,
+  Hints,
+  Subgraph,
+  NFTMint,
+  DEX,
+  Lending,
+  FlashLoan,
+  UniSwap,
+  SandwichAttack,
+} from "./views";
 import { useStaticJsonRPC, useGasPrice } from "./hooks";
 
 const { ethers } = require("ethers");
@@ -335,10 +347,10 @@ function App(props) {
           <Link to="/UniSwap">UniSwap Pool</Link>
         </Menu.Item>
 
-        {/* <Menu.Item key="/mainnetdai">
-          <Link to="/mainnetdai">Mainnet DAI</Link>
+        <Menu.Item key="/SandwichAttack">
+          <Link to="/SandwichAttack">SandwichAttack</Link>
         </Menu.Item>
-        <Menu.Item key="/subgraph">
+        {/* <Menu.Item key="/subgraph">
           <Link to="/subgraph">Subgraph</Link>
         </Menu.Item> */}
       </Menu>
@@ -389,6 +401,20 @@ function App(props) {
         </Route>
         <Route path="/swaptokens">
           <SwapTokens
+            address={address}
+            userSigner={userSigner}
+            mainnetProvider={mainnetProvider}
+            localProvider={localProvider}
+            yourLocalBalance={yourLocalBalance}
+            price={price}
+            tx={tx}
+            writeContracts={writeContracts}
+            readContracts={readContracts}
+            purpose={purpose}
+          />
+        </Route>
+        <Route path="/SandwichAttack">
+          <SandwichAttack
             address={address}
             userSigner={userSigner}
             mainnetProvider={mainnetProvider}
