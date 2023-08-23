@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@aave/core-v3@^1.18.0":
+  version "1.18.0"
+  resolved "https://registry.yarnpkg.com/@aave/core-v3/-/core-v3-1.18.0.tgz#00b2e4bebf2f12ba8c0a21b6663bb82c63d00f9a"
+  integrity sha512-vWJdJ+Ci9LEgalm0CzKpUmYh35jD0MKYK1AftrIRoiBKCDRNXL8VpQ+60ByMWwIbCy9P81Z4G5oHy6lRduERNQ==
+
 "@ant-design/colors@^6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@ant-design/colors/-/colors-6.0.0.tgz#9b9366257cffcc47db42b9d0203bb592c13c0298"
