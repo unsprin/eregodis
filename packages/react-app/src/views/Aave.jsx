@@ -4,7 +4,7 @@ import { ethers, utils } from "ethers";
 import ERC20Artifact from "@openzeppelin/contracts/build/contracts/IERC20.json";
 import { Address, ERC20Balance, Transactions } from "../components";
 import { BASE_URL, bbSupportedERC20Tokens, bbNode } from "../constants";
-import AAVE_ABI from "../contracts/aave_abi.js";
+import AAVE_ABI from "../helpers/aave_abi.js";
 export default function Aave({
   purpose,
   address,
