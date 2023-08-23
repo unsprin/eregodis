@@ -9,3 +9,4 @@ export { default as Lending } from "./Lending";
 export { default as FlashLoan } from "./FlashLoan";
 export { default as UniSwap } from "./UniSwap";
 export { default as SandwichAttack } from "./SandwichAttack";
+export { default as Aave } from "./Aave";

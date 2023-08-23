@@ -164,6 +164,25 @@ function Home({ yourLocalBalance, readContracts }) {
           In this contract, you will create Perform a Sandwich Attack.
         </span>
       </div>
+      <div style={{ margin: 32 }}>
+        <span style={{ fontWeight: "bolder" }}>8.</span>
+        <span
+          className="highlight"
+          style={{ marginLeft: 4, /* backgroundColor: "#f9f9f9", */ padding: 4, borderRadius: 4, fontWeight: "bolder" }}
+        >
+          Aave.sol
+        </span>{" "}
+        <span
+          style={{ marginLeft: 4, /* backgroundColor: "#f9f9f9", */ padding: 4, borderRadius: 4, fontWeight: "bolder" }}
+        >
+          (packages/hardhat/contracts/Aave.sol)
+        </span>
+      </div>
+      <div style={{ margin: 32 }}>
+        <span style={{ marginLeft: 4, marginTop: -10, /* backgroundColor: "#f9f9f9", */ padding: 4, borderRadius: 4 }}>
+          In this contract, you will create Aave pool.
+        </span>
+      </div>
 
       <div style={{ margin: 32 }}>
         <span style={{ marginRight: 8 }}>🍴</span>

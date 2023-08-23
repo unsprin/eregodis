@@ -41,6 +41,7 @@ import {
   FlashLoan,
   UniSwap,
   SandwichAttack,
+  Aave,
 } from "./views";
 import { useStaticJsonRPC, useGasPrice } from "./hooks";
 
@@ -350,9 +351,9 @@ function App(props) {
         <Menu.Item key="/SandwichAttack">
           <Link to="/SandwichAttack">SandwichAttack</Link>
         </Menu.Item>
-        {/* <Menu.Item key="/subgraph">
-          <Link to="/subgraph">Subgraph</Link>
-        </Menu.Item> */}
+        <Menu.Item key="/Aave">
+          <Link to="/Aave">Aave</Link>
+        </Menu.Item>
       </Menu>
 
       <Switch>
@@ -491,6 +492,22 @@ function App(props) {
         </Route>
         <Route path="/UniSwap">
           <UniSwap
+            address={address}
+            userSigner={userSigner}
+            mainnetProvider={mainnetProvider}
+            localProvider={localProvider}
+            yourLocalBalance={yourLocalBalance}
+            price={price}
+            tx={tx}
+            writeContracts={writeContracts}
+            readContracts={readContracts}
+            purpose={purpose}
+            contractConfig={contractConfig}
+            blockExplorer={blockExplorer}
+          />
+        </Route>
+        <Route path="/Aave">
+          <Aave
             address={address}
             userSigner={userSigner}
             mainnetProvider={mainnetProvider}
