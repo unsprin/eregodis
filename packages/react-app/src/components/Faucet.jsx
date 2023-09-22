@@ -76,12 +76,15 @@ export default function Faucet(props) {
   const tx = Transactor(localProvider);
 
   const erc20Tokens = bbNode ? bbSupportedERC20Tokens[bbNode.forkingChainId] : {};
-  let erc20Options = Object.keys(erc20Tokens).map(token => {
-    return {
-      value: erc20Tokens[token].address,
-      label: token,
-    };
-  });
+  let erc20Options = [];
+  if (erc20Tokens && typeof erc20Tokens === "object") {
+    erc20Options = Object.keys(erc20Tokens).map(token => {
+      return {
+        value: erc20Tokens[token]?.address,
+        label: token,
+      };
+    });
+  }
   erc20Options = [{ value: "native", label: "BB ETH (Native token)" }, ...erc20Options];
 
   const submitFaucet = () => {

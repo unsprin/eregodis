@@ -10,7 +10,7 @@ export const networkData = {
   "Goerli Testnet": [5, "https://rpc.ankr.com/eth_goerli"],
   "Optimism Mainnet": [10, "https://mainnet.optimism.io"],
   "Arbitrum Mainnet": [42161, "https://arb1.arbitrum.io/rpc"],
-  "Arbitrum Goerli": [421613, "https://goerli-rollup.arbitrum.io/rpc"],
+  "Arbitrum Goerli": [421613, "https://endpoints.omniatech.io/v1/arbitrum/goerli/public"],
   "Fantom Mainnet": [250, "https://rpc.fantom.network"],
   "Fantom Testnet": [4002, "https://rpc.ankr.com/fantom_testnet"],
   "Sepolia Testnet": [11155111, "https://rpc.sepolia.org"],
