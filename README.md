@@ -85,7 +85,7 @@ yarn faucet-bb USDC <Insert Amount (optional)> <Insert Your Wallet Address>
 7. WBTC
 8. UNI
 9. AAVE
-
+10.Cake
 ```bash
 
 # Please note the address for each ERC20 Tokens is automatically updated / changed based on the network that you have forked from
